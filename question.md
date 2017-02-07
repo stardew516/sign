@@ -22,6 +22,7 @@ app.use(function (req, res, next) {
 ##### 2. GET http://localhost:1991/ net::ERR_TOO_MANY_REDIRECTS
 ###### 描述:
 重定向过多,最后找到原因是因为存session值的时候没有仓库,没有使用mongodb.
+###### 解决:
 ```
 req.session.user = user; //改为本地文件存session值.
 ```
